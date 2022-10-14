@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class selectSort {
     static Scanner input = new Scanner(System.in);
-
+    
     public static void main(String[] args) {
         System.out.println("Please input the length of an array.");
         int total = Integer.parseInt(input.nextLine());
@@ -18,19 +18,23 @@ public class selectSort {
         selectSort(arr);
         printArrays(arr);
     }
-
-    //defin
+    
+    //define a method to swap two value in the array.
     public static void swap(int[] arr, int i , int j ){
         int tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;
     }
+    
+    //define a method to print the array.
     public static void printArrays(int[] arr){
         for(int i = 0; i < arr.length; i++){
             System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
+    
+    //define a method to sort the array.
     public static void selectSort(int[] arr){
         if(arr == null || arr.length < 2) {
             return;
